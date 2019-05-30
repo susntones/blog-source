@@ -4,7 +4,9 @@ tags:
   - 算法
 categories:
   - 九章算法
+date: 2019-05-30 14:37:51
 ---
+
 
 # Binary Search #
 
@@ -166,7 +168,7 @@ function getMatrixValue(matrix, index, n) {
 }
 ```
 
-### Search a 2D Matrix || ###
+### Search a 2D Matrix II ###
 
 &emsp;&emsp;思路是从左下角开始找起，如果元素大于target，上移，如果小于target，右移，相等直接返回true。
 
@@ -197,3 +199,73 @@ var searchMatrix = function(matrix, target) {
     return false;
 };
 ```
+
+### Find minimum in rotated sorted array ###
+
+[leedcode地址](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)
+
+```
+var findMin = function(nums) {
+    if (nums.length === 0) {
+        return null;
+    }
+    var start = 0;
+    var end = nums.length - 1;
+    while (start + 1 < end) {
+        var mid = start + Math.floor((end - start) / 2);
+        if (nums[mid] < nums[end]) {
+            end = mid;
+        } else {
+            start = mid;
+        }
+    }
+    if (nums[start] <= nums[end]) {
+        return nums[start];
+    } else {
+        return nums[end];
+    }
+};
+```
+
+### Find minimum in rotated sorted array II ###
+
+这个需要通过黑盒测试证明时间复杂度是O(n)，比如针对[1, 1, 0, 1, 1, ,1 ,1]就无法使用二分法查找最小值。
+
+[leedcode地址](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+
+### Search in rotated sorted array ###
+
+[leedcode地址](https://leetcode-cn.com/problems/search-in-rotated-sorted-array)
+
+```
+var search = function(nums, target) {
+    var start = 0;
+    var end = nums.length - 1;
+    while (start + 1 < end) {
+        var mid = start + Math.floor((end - start) / 2);
+        if (nums[mid] === target) {
+            return mid;
+        }
+        if ((nums[start] <= target && target < nums[mid]) || (nums[start] >= nums[mid] && (nums[start] <= target || target < nums[mid]))) {
+            end = mid;
+        } else if ((nums[mid] < target && target <= nums[end] ) || (nums[mid] >= nums[end] && (nums[mid] < target || target <= nums[end]))) {
+            start = mid;
+        } else {
+            start = end;
+        }
+    }
+    if (nums[start] === target) {
+        return start;
+    }
+    if (nums[end] === target) {
+        return end;
+    }
+    return -1;
+};
+```
+
+### Search in rotated sorted array II ###
+
+这个也可以依据黑盒算法证明无法通过二分查找计算结果。
+
+[leedcode地址](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii)
