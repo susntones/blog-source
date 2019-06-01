@@ -229,7 +229,7 @@ var findMin = function(nums) {
 
 ### Find minimum in rotated sorted array II ###
 
-这个需要通过黑盒测试证明时间复杂度是O(n)，比如针对[1, 1, 0, 1, 1, ,1 ,1]就无法使用二分法查找最小值。
+&emsp;&emsp;这个需要通过黑盒测试证明时间复杂度是O(n)，比如针对[1, 1, 0, 1, 1, ,1 ,1]就无法使用二分法查找最小值。
 
 [leedcode地址](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)
 
@@ -266,6 +266,6 @@ var search = function(nums, target) {
 
 ### Search in rotated sorted array II ###
 
-这个也可以依据黑盒算法证明无法通过二分查找计算结果。
+&emsp;&emsp;这个也可以依据黑盒算法证明无法通过二分查找计算结果。
 
 [leedcode地址](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii)
