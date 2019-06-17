@@ -7,8 +7,7 @@ categories:
 date: 2019-06-01 10:06:42
 ---
 
-
-# Sorted Array #
+## Sorted Array ##
 
 ### Merge sorted array ###
 
