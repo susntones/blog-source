@@ -8,12 +8,12 @@ subtitle: 记录下自己的成长，毕竟做程序员这么久了。
 description:
 keywords:
 author: 刘白石
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://susntones.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -32,17 +32,32 @@ skip_render:
 new_post_name: :year-:month-:day-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
 relative_link: false
 future: true
+syntax_highlighter: highlight.js
 highlight:
-  enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Markdown renderer (hexo-renderer-marked)
+## postAsset: resolve image paths relative to the post asset folder
+marked:
+  prependRoot: true
+  postAsset: true
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

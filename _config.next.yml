@@ -1,0 +1,55 @@
+# NexT 8 theme config (migrated from source/_data/next.yml, NexT 5.x)
+# Only overrides are listed here; see node_modules/hexo-theme-next/_config.yml for all options.
+# Docs: https://theme-next.js.org/docs/
+
+scheme: Pisces
+
+favicon:
+  small: /favicon.ico
+  medium: /favicon.ico
+
+menu:
+  home: / || fa fa-home
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+  tags: /tags/ || fa fa-tags
+
+menu_settings:
+  icons: true
+  badges: false
+
+sidebar:
+  position: left
+  display: post
+  offset: 12
+
+avatar:
+  url: /images/avatar.jpg
+
+social:
+  GitHub: https://github.com/susntones || fab fa-github
+  E-Mail: mailto:sunstone611@163.com || fa fa-envelope
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: false
+
+toc:
+  enable: true
+  number: true
+  wrap: false
+
+footer:
+  icon:
+    name: fa fa-heart
+  powered: true
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: false
+  categories: true
+
+excerpt_description: true
