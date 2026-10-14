@@ -71,6 +71,7 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  AI学习: ai
 tag_map:
 
 # Date / Time format

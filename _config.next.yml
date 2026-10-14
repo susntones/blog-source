@@ -10,6 +10,7 @@ favicon:
 
 menu:
   home: / || fa fa-home
+  AI学习: /categories/ai/ || fa fa-robot
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   tags: /tags/ || fa fa-tags
